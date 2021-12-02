@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'appTheme.dart';
-import 'home.dart';
-import 'popular2.dart';
+import 'package:grocery/constant/appTheme.dart';
+import 'screens/home.dart';
 
 void main() {
   runApp(const Grocery());

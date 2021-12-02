@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:grocery/popular.dart';
-import 'package:grocery/popular2.dart';
-import 'package:grocery/promo.dart';
-
-import 'compose.dart';
-import 'customButton.dart';
+import 'package:grocery/widgets/compose.dart';
+import 'package:grocery/widgets/popular.dart';
+import 'package:grocery/widgets/popular2.dart';
+import 'package:grocery/widgets/promo.dart';
 
 class Home extends StatefulWidget {
   @override
