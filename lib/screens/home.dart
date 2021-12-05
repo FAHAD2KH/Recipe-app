@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocery/widgets/bottom_nav.dart';
 import 'package:grocery/widgets/compose.dart';
-import 'package:grocery/widgets/popular.dart';
 import 'package:grocery/widgets/popular2.dart';
 import 'package:grocery/widgets/promo.dart';
 
@@ -15,6 +16,27 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Container(
+        padding: EdgeInsets.only(top: 30),
+        child: SizedBox(
+          height: 58,
+          width: 58,
+          child: FloatingActionButton(
+            child: SvgPicture.asset(
+              'assets/icon/search.svg',
+              width: 22,
+              height: 20,
+            ),
+            onPressed: () {},
+            backgroundColor: Theme.of(context).primaryColor,
+            shape: BeveledRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+          ),
+        ),
+      ),
+      bottomNavigationBar: BottomNav(),
       appBar: AppBar(
         centerTitle: true, // لجعل العنوان بالمنتصف
         title: const Text('RECIPE APP'),
@@ -199,29 +221,8 @@ class _HomeState extends State<Home> {
               SizedBox(
                 height: 30,
               ),
+              // Compose Section (It might be changed)
               Compose(),
-              // Popular recipes here ..
-              // SingleChildScrollView(
-              //     scrollDirection: Axis.horizontal,
-              //     child: Container(
-              //       padding: EdgeInsets.only(left: 11.4),
-              //       margin: EdgeInsets.all(10),
-              //       child: Column(
-              //           crossAxisAlignment: CrossAxisAlignment.start,
-              //           children: [
-              //             Text(
-              //               "Popular recipes",
-              //               style: Theme.of(context).textTheme.headline6,
-              //             ),
-              //             Popular(),
-              //             // Popular2(),
-              //             Popular(),
-              //             // Popular2(),
-              //           ]),
-              //     )),
-              // Here's popular recipe ends ..
-
-              // here's new one
               Container(
                 margin: EdgeInsets.only(top: 14),
                 padding: EdgeInsets.symmetric(horizontal: 16),

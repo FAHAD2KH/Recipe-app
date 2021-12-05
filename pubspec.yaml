@@ -81,6 +81,9 @@ flutter:
     - assets/images/img.png
     - assets/icon/ico_rate.svg
     - assets/icon/ico_rating.svg
+    - assets/icon/home.svg
+    - assets/icon/special.svg
+    - assets/icon/search.svg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

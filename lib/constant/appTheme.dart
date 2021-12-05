@@ -61,7 +61,7 @@ class Apptheme {
   static ThemeData light() {
     return ThemeData(
       brightness: Brightness.light,
-      primaryColor: Colors.yellow[200],
+      primaryColor: Color.fromRGBO(252, 139, 86, 1),
       cardColor: Colors.yellow[900],
       checkboxTheme: CheckboxThemeData(
         fillColor: MaterialStateColor.resolveWith((states) {
