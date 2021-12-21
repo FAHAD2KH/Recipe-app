@@ -15,7 +15,7 @@ class Grocery extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: theme,
-      title: 'Recipe App',
+      title: 'Recipe App Test ..',
       home: Home(),
     );
   }

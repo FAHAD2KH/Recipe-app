@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grocery/widgets/bottom_nav.dart';
 import 'package:grocery/widgets/compose.dart';
-import 'package:grocery/widgets/popular2.dart';
+import 'package:grocery/widgets/popular.dart';
 import 'package:grocery/widgets/promo.dart';
 
 class Home extends StatefulWidget {
@@ -28,6 +28,7 @@ class _HomeState extends State<Home> {
               width: 22,
               height: 20,
             ),
+            //Todo #2 Show popup search
             onPressed: () {},
             backgroundColor: Theme.of(context).primaryColor,
             shape: BeveledRectangleBorder(

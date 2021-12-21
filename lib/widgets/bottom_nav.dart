@@ -13,7 +13,7 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-  int currentTab = 0; // to keep track of active tab index
+  int currentTab = 0; // لنعرف ماهي الايقونه التي تم اختيارها
   final List<Widget> screens = [
     Home(),
     CreatedRecipes(),
@@ -28,6 +28,7 @@ class _BottomNavState extends State<BottomNav> {
     return Container(
       padding: EdgeInsets.all(14),
       height: 60,
+
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -39,9 +40,10 @@ class _BottomNavState extends State<BottomNav> {
                 onPressed: () {
                   setState(() {
                     currentScreen =
-                        Home(); // if user taps on this dashboard tab will be active
+                        Home(); // هنا إذا تم الضضغط على الايقونه نعرف شو الايقونه اللي انضغطت ونسوي اللي بدنا ياه
                     currentTab = 0;
                   });
+                  // عند الضغط يتم النقل على حسب ايقونه الصفحه
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => Home()),
@@ -61,7 +63,7 @@ class _BottomNavState extends State<BottomNav> {
                 onPressed: () {
                   setState(() {
                     currentScreen =
-                        CreatedRecipes(); // if user taps on this dashboard tab will be active
+                    CreatedRecipes();
                     currentTab = 1;
                   });
                   Navigator.push(
@@ -81,7 +83,7 @@ class _BottomNavState extends State<BottomNav> {
             ],
           ),
 
-          // Right Tab bar icons
+          //الجهه اليمنى من البار هنا
 
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,7 +93,7 @@ class _BottomNavState extends State<BottomNav> {
                 onPressed: () {
                   setState(() {
                     currentScreen =
-                        Bookmarks(); // if user taps on this dashboard tab will be active
+                        Bookmarks();
                     currentTab = 2;
                   });
                   Navigator.push(
@@ -114,7 +116,7 @@ class _BottomNavState extends State<BottomNav> {
                 onPressed: () {
                   setState(() {
                     currentScreen =
-                        AppSettings(); // if user taps on this dashboard tab will be active
+                    AppSettings();
                     currentTab = 3;
                   });
                   Navigator.push(
@@ -127,10 +129,6 @@ class _BottomNavState extends State<BottomNav> {
                   children: <Widget>[
                     Icon(Icons.settings_outlined,
                         color: Theme.of(context).primaryColor),
-                    // Text(
-                    //   'Settings',
-                    //   style: TextStyle(color: Theme.of(context).primaryColor),
-                    // ),
                   ],
                 ),
               )
